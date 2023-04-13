@@ -1,9 +1,6 @@
-import gc
-import os
 import pickle
-import numpy as np
 from pydantic import BaseModel
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI
 from sklearn.feature_extraction.text import CountVectorizer
 from fastapi.middleware.cors import CORSMiddleware
 
