@@ -1,73 +1,215 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Member of ForMentee Developer Team</title>
+    <title>ForMentee Developer Team</title>
     <style>
-        /* CSS styles */
+        /* Style for the dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            background-color: lightgreen;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            padding: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style for the page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: lightblue; /* Updated background color */
+            background: linear-gradient(90deg, rgba(42,181,225,1) 0%, rgba(25,197,252,1) 50%);
+            color: antiquewhite;
         }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
+
+        header {
+            background-color: #2AB5E1;
+            color: white;
             padding: 20px;
-        }
-        h1 {
             text-align: center;
         }
-        .team-member {
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Style for the team member cards */
+        .card {
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+
+        .card .member-info {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            margin-bottom: 20px;
         }
-        .team-member img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .team-member-info {
+
+        .card .bio-container {
             flex: 1;
+            margin-left: 40px;
+            margin-top: 10px;
+            margin-bottom: 50px;
         }
-        .team-member-name {
-            font-size: 18px;
-            font-weight: bold;
+
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
             margin: 0;
         }
-        .team-member-role {
-            font-size: 14px;
-            margin: 0;
+
+        img {
+            width: 200px;
+            height: auto;
         }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .text-container {
+            display: block;
+            position: absolute;
+            top: 40px;
+            left: 250px;
+            background-color: lightskyblue;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: large;
+        }
+
+        .text-container1 {
+            display: block;
+            position: absolute;
+            top: 40px;
+            left:250px;
+            background-color: lightskyblue;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: large;
+        }
+
+        .text-container2 {
+            display: block;
+            position: absolute;
+            top: 40px;
+            left:250px;
+            background-color: lightskyblue;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: large;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        /* .image-container:hover .text-container {
+            display: block;
+        } */
     </style>
 </head>
+
 <body>
+    <header>
+        <img src="file:///Users/akhilsharma/Desktop/WebDevForMente/formente/assets/logo_big.png" alt="formente Image">
+    </header>
     <div class="container">
-        <h1>Member of ForMentee Developer Team</h1> <!-- Updated title -->
-        <div class="team-member">
-            <img src="https://avatars.githubusercontent.com/u/68015525?s=400&u=a3180b9b2d4c200fb2a5f2756fa1817aa6cb4f98&v=4" alt="Team Member 1">
-            <div class="team-member-info">
-                <h2 class="team-member-name">Akhil Sharma</h2>
-                <p class="team-member-role">Contributor</p>
+        <div class="card">
+            <div class="image-container">
+                <img src="https://avatars.githubusercontent.com/u/68015525?v=4" alt="Team Member 2">
+                <div class="text-container">
+                    <p> <br> As the Backend Developer for ForMente, <br> I was responsible for designing and
+                        implementing <br> the server-side architecture that powers the website.</p>
+                </div>
+            </div>
+            <h2>Akhil Sharma</h2>
+
+            <div class="dropdown">
+                <p>Want to Know more about him....</p>
+                <div class="dropdown-content">
+                    <p>Github: <a href="https://github.com/Akhil-Sharma30">AkhilSharma30</a></p>
+                    <p>Email: <a href="mailto:akhilsharma.off@gmail.com">akhilsharma</a></p>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/akhil-sharma-%F0%9F%91%93-35a880202/">Akhil
+                            Sharma</a> </p>
+                </div>
             </div>
         </div>
-        <div class="team-member">
-            <img src="https://media.licdn.com/dms/image/C5603AQFJxdsPfuCnJQ/profile-displayphoto-shrink_400_400/0/1611941908610?e=1686787200&v=beta&t=diuU-9B8qKzkKnqqS_0bknuFsy7meFdDnII4U0R-FMM" alt="Team Member 2">
-            <div class="team-member-info">
-                <h2 class="team-member-name">Onkar Mahapatra</h2>
-                <p class="team-member-role">Contributor</p>
+        <div class="container">
+            <div class="card">
+                <div class="image-container">
+            <img src="https://media.licdn.com/dms/image/C5603AQFJxdsPfuCnJQ/profile-displayphoto-shrink_400_400/0/1611941908610?e=1686787200&v=beta&t=diuU-9B8qKzkKnqqS_0bknuFsy7meFdDnII4U0R-FMM"
+                alt="Team Member 2">
+            
+            <div class="text-container1">
+
+                <p>As the Frontend Developer for ForMente, <br> I focused on designing and implementing the <br>user
+                    interface that users interact with on the website.</p>
             </div>
         </div>
-        <div class="team-member">
+        <h2>Onkar Mahapatra</h2>
+            <div class="dropdown">
+                <p>Want to Know more about him....</p>
+                <div class="dropdown-content">
+                    <p>Github: <a href="https://github.com/Onkar627">Onkar627</a></p>
+                    <p>Email: <a href="mailto:onkarmahapatra627@gmail.com">onkarmahapatra</a></p>
+                    <p>Linkedin: <a href="https://www.linkedin.com/in/onkarmahapatra/">Onkar Mahapatra</a> </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="image-container">
             <img src="https://avatars.githubusercontent.com/u/74055102?v=4" alt="Team Member 3">
-            <div class="team-member-info">
-                <h2 class="team-member-name">Saransh Chopra</h2>
-                <p class="team-member-role">Contributor</p>
+                <div class="text-container2">
+                    <p>As the NLP Backend Developer for ForMente,<br> I played a critical role in developing the natural
+                        language <br> processing algorithms that power the website's emotional
+                        <br> analysis features.
+                    </p>
+                </div>
+                </div>
+                <h2>Saransh Chopra</h2>
+                <div class="dropdown">
+                    <p>Want to Know more about him....</p>
+                    <div class="dropdown-content">
+                        <p>Github: <a href="https://github.com/Saransh-cpp">Saransh-cpp</a></p>
+                        <p>Email: <a href="mailto:saransh0701@gmail.com">saranshChopra</a></p>
+                        <p>Linkedin: <a href="https://www.linkedin.com/in/saransh-cpp/">Onkar Mahapatra</a> </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+            </div>
+            <footer>
+                <p>&copy; 2023 ForMente. All rights reserved.</p>
+            </footer>
+    
 </body>
+
 </html>
