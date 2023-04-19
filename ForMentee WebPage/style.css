@@ -1,12 +1,15 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: lightblue;
-    color: #333;
+    background: linear-gradient(90deg, rgba(42,181,225,1) 0%, rgba(25,197,252,1) 50%);
+    text-decoration-color: antiquewhite;
+    color: antiquewhite;
   }
   
   header {
     text-align: center;
     margin-bottom: 30px;
+    text-decoration-color: antiquewhite;
   }
   
   h1 {
@@ -14,6 +17,8 @@ body {
     color: #007bff;
     transition: color 0.3s ease;
     cursor: pointer;
+    margin: center;
+    text-decoration-color: antiquewhite;
   }
   
   h1:hover {
@@ -27,21 +32,30 @@ body {
     border: 3px solid #007bff;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
   }
   
   h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
+    text-decoration-color: antiquewhite;
   }
   
   p {
     font-size: 16px;
     margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-decoration-color: antiquewhite;
   }
   
   ul {
     list-style-type: disc;
     margin-left: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-decoration-color: antiquewhite;
   }
   
   footer {
