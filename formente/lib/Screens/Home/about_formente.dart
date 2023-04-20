@@ -15,43 +15,43 @@ import 'package:flutter/material.dart';
 import 'package:async/async.dart';
 import 'package:flutter/services.dart';
 
-class AboutUs extends StatefulWidget {
-  const AboutUs({Key? key}) : super(key: key);
+class AboutForMente extends StatefulWidget {
+  const AboutForMente({Key? key}) : super(key: key);
 
   @override
-  AboutUsState createState() {
-    return AboutUsState();
+  AboutForMenteState createState() {
+    return AboutForMenteState();
   }
 }
 
-class AboutUsState extends State<AboutUs> {
+class AboutForMenteState extends State<AboutForMente> {
   final _templateMemoizer = AsyncMemoizer<String>();
   EasyWebViewControllerWrapperBase? _controller;
-  final _key = const ValueKey('aboutUs.html');
+  final _key = const ValueKey('forMentee.html');
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('About us')),
-      body:  FutureBuilder<String>(
-          future: _templateMemoizer.runOnce(
-            () => rootBundle.loadString('assets/aboutUs.html')),
+        appBar: AppBar(title: const Text('About ForMente')),
+        body:  FutureBuilder<String>(
+            future: _templateMemoizer.runOnce(
+                    () => rootBundle.loadString('assets/forMentee.html')),
             builder: (context, snapshot) {
               final invoiceSrc = snapshot.data;
               if (invoiceSrc == null) {
                 return const Center(child: CircularProgressIndicator());
               }
-            return EasyWebView(
-              src: invoiceSrc,
-              onLoaded: (controller) {
-              setState(() {
-                _controller = controller;
-              });
-            },
-            key: _key,
-          );
-        }
-      )
+              return EasyWebView(
+                src: invoiceSrc,
+                onLoaded: (controller) {
+                  setState(() {
+                    _controller = controller;
+                  });
+                },
+                key: _key,
+              );
+            }
+        )
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:formente/Providers/user.dart';
+import 'package:formente/Screens/Home/about_formente.dart';
 import 'package:formente/Screens/Home/about_us.dart';
 import 'package:provider/provider.dart';
 class AppDrawer extends StatefulWidget {
@@ -33,6 +34,20 @@ class _AppDrawerState extends State<AppDrawer> {
               title: const Text("About Us"),
             ),
           ),
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const AboutForMente()));
+
+            },
+            child: ListTile(
+              leading: const Icon(
+                  Icons.info_outline_rounded
+              ),
+              trailing: Icon(Icons.arrow_forward_ios_rounded,color:Colors.grey[900]),
+              title: const Text("About ForMente"),
+            ),
+          ),
+
           GestureDetector(
             onTap:()async{
               await userProvider.signOut();
