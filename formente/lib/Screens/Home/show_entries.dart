@@ -43,45 +43,47 @@ class _ShowEntriesState extends State<ShowEntries> {
                     },
                   )
               ),
-              body: Container(
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height,
-                  decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                          colors: [
-                            const Color(0xff2AB5E1),
-                            const Color(0xff19C5FC).withOpacity(0.5)
+              body: SingleChildScrollView(
+                child: Container(
+                    height: MediaQuery
+                        .of(context)
+                        .size
+                        .height,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                              const Color(0xff2AB5E1),
+                              const Color(0xff19C5FC).withOpacity(0.5)
 
-                          ],
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter
-                      )
-                  ),
-                  padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-                  child: Column(
-                    children: [
-                      Container(
-                        margin: const EdgeInsets.only(bottom: 30),
-                        child: const Text(
-                          "Recent Entries",
-                          style: TextStyle(
-                              fontSize: 30,
-                              color: Colors.white70
+                            ],
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter
+                        )
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(bottom: 30),
+                          child: const Text(
+                            "Recent Entries",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white70
+                            ),
                           ),
                         ),
-                      ),
 
-                      ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: entries.data?.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            return DiaryEntryTile(entry: entries.data![index]);
-                          }
-                      ),
-                    ],
-                  )
+                        ListView.builder(
+                            shrinkWrap: true,
+                            itemCount: entries.data?.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return DiaryEntryTile(entry: entries.data![index]);
+                            }
+                        ),
+                      ],
+                    )
+                ),
               ),
             );
           }else {

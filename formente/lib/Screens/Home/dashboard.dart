@@ -42,6 +42,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       drawer: const AppDrawer(),
       appBar: AppBar(
+        title: const Text("ForMente: An AI powered secure personal diary"),
         backgroundColor: const Color(0xff2AB5E1),
         elevation: 0,
       ),
@@ -61,6 +62,7 @@ class _DashboardState extends State<Dashboard> {
             Expanded(
               flex: 6,
               child: Swiper(
+                autoplay: true,
                 controller: _swiperController,
                 itemCount: dashboardItemList.length,
                 onIndexChanged: (int value) {
@@ -101,11 +103,12 @@ class _DashboardState extends State<Dashboard> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder: (context)=>const AddDiaryEntry()));
         },
-        child: const Icon(
+        label: const Text('New diary entry'),
+        icon: const Icon(
           Icons.add
         ),
       ),
